@@ -26,15 +26,46 @@ export default function Home() {
       });
   }, []);
 
+  console.log(editorState)
+
+  
+
   return (
     <div className="container my-5">
-      <Editor
-        wrapperClassName="demo-wrapper"
-        editorClassName="demo-editor"
-        localization={{
-          locale: "ja",
+<Editor
+        editorState={editorState}
+        onEditorStateChange={handleEditorStateChange}
+        toolbarClassName="toolbarClassName"
+        wrapperClassName="wrapperClassName"
+        editorClassName="editorClassName"
+        editorStyle={{
+          border: "solid 1px lightgray",
+          padding: "5px",
+          minHeight: editorMinHeight,
+        }}
+        localization={{ locale: "ja" }}
+        toolbar={{
+          options: ["inline", "blockType", "list", "link", "image", "history"],
+          inline: {
+            options: [
+              "bold",
+              "italic",
+              "underline",
+              "strikethrough",
+              "monospace",
+            ],
+          },
+          list: {
+            options: ["unordered", "ordered"],
+          },
+          image: {
+            uploadCallback: handleImageUpload,
+            alt: { present: true, mandatory: true },
+            previewImage: true,
+          },
         }}
       />
+    </>
     </div>
   );
 }
