@@ -26,13 +26,11 @@ export default function Home() {
       });
   }, []);
 
-  console.log(editorState)
-
-  
+  console.log(editorState);
 
   return (
     <div className="container my-5">
-<Editor
+      <Editor
         editorState={editorState}
         onEditorStateChange={handleEditorStateChange}
         toolbarClassName="toolbarClassName"
@@ -65,7 +63,6 @@ export default function Home() {
           },
         }}
       />
-    </>
     </div>
   );
 }
