@@ -13,7 +13,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 export default function Home() {
   const [editorState, setEditorState] = useState();
 
-  const uploadImageCallBack = useCallback(async (file) => {
+  const handleImageUpload = useCallback(async (file) => {
     return await axios
       .post
       // fileをアップロードし、アップロード後の画像のurlを返す処理
