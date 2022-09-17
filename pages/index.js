@@ -32,7 +32,6 @@ export default function Home() {
     <div className="container my-5">
       <Editor
         editorState={editorState}
-        onEditorStateChange={handleEditorStateChange}
         toolbarClassName="toolbarClassName"
         wrapperClassName="wrapperClassName"
         editorClassName="editorClassName"
