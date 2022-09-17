@@ -38,7 +38,6 @@ export default function Home() {
         editorStyle={{
           border: "solid 1px lightgray",
           padding: "5px",
-          minHeight: editorMinHeight,
         }}
         localization={{ locale: "ja" }}
         toolbar={{
