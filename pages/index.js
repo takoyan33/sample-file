@@ -11,7 +11,7 @@ import { ContentState, convertToRaw, EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export default function Home() {
-  const [editorState, setEditorState] = useState();
+  const [editorState, setEditorState] = useState("");
 
   const handleImageUpload = useCallback(async (file) => {
     return await axios
@@ -40,26 +40,6 @@ export default function Home() {
           padding: "5px",
         }}
         localization={{ locale: "ja" }}
-        toolbar={{
-          options: ["inline", "blockType", "list", "link", "image", "history"],
-          inline: {
-            options: [
-              "bold",
-              "italic",
-              "underline",
-              "strikethrough",
-              "monospace",
-            ],
-          },
-          list: {
-            options: ["unordered", "ordered"],
-          },
-          image: {
-            uploadCallback: handleImageUpload,
-            alt: { present: true, mandatory: true },
-            previewImage: true,
-          },
-        }}
       />
     </div>
   );

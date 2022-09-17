@@ -17,6 +17,7 @@
     "react-draft-wysiwyg": "^1.15.0"
   },
   "devDependencies": {
+    "@types/react-draft-wysiwyg": "^1.13.4",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0"
   }
